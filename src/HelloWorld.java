@@ -1,15 +1,15 @@
 public class HelloWorld {
 
     public static void main(String[] args) {
-        System.out.println("Hello, world!");
-        System.out.print("Hello,");
-        System.out.print(" world!");
-
-        int myFavoriteNumber = 19;
-        System.out.println(myFavoriteNumber);
-
-        String mystring = "This is my string.";
-        System.out.println(mystring);
+//        System.out.println("Hello, world!");
+//        System.out.print("Hello,");
+//        System.out.print(" world!");
+//
+//        int myFavoriteNumber = 19;
+//        System.out.println(myFavoriteNumber);
+//
+//        String mystring = "This is my string.";
+//        System.out.println(mystring);
 
 //        mystring = 'a';
 //        mystring = 3.14159;
@@ -21,7 +21,7 @@ public class HelloWorld {
 
 //        System.out.println(myNumber);
 
-        float myFloat = myNumber;
+//        float myFloat = myNumber;
 
 
 //        int x = 5;

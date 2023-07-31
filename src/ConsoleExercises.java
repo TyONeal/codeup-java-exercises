@@ -8,6 +8,7 @@ public class ConsoleExercises {
         System.out.printf("%s %.2f", valuePi, pi);
 
         Scanner scanner = new Scanner(System.in);
+        scanner.nextLine();
         System.out.println("Enter a number: ");
         int userInput = scanner.nextInt();
         System.out.println("You entered: ---> " + userInput + " <---");
