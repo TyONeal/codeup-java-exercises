@@ -74,8 +74,14 @@ public class MethodsExercises {
 
     public static void getFactorial(int min, int max) {
         Scanner scan = new Scanner(System.in);
-        System.out.println("Please enter a number between 1 and 10: ");
+        System.out.println("Please enter a number between " + min + " and " + max + ":" );
         long userResponse = scan.nextInt();
+        if(userResponse < min && userResponse > max) {
+            System.out.println("This is invalid. please enter a number between " + min + " and " + max + ":" );
+        }
+        if (userResponse >= min && userResponse <= max) {
+
+        }
 
     }
 
