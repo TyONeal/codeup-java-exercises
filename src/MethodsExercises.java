@@ -1,8 +1,7 @@
 import java.util.Scanner;
+import java.util.Random;
 
 public class MethodsExercises {
-
-
 
 //Arithmetic methods:
 
@@ -43,25 +42,51 @@ public class MethodsExercises {
 //Bonus 2
 
     public static int getInteger(int min, int max) {
-       Scanner scan = new Scanner(System.in);
+        Scanner scan = new Scanner(System.in);
 
-       do {
-           System.out.println("Enter a number between 1 and 20: ");
-           int selection = scan.nextInt();
+        Random secret = new Random();
+        int newSecret = secret.nextInt(max - min + 1) + min;
+        System.out.println(newSecret);
 
-           if (selection == 4) {
-               return 4;
-           }
-       } while (true);
+
+        while (true) {
+
+            System.out.println("Enter the correct number between " + min + " and " + max + ": ");
+            int userResponse = scan.nextInt();
+
+            if(userResponse < min || userResponse > max) {
+                System.out.println("Please enter a valid number from " + min + " and " + max);
+                continue;
+            }
+
+            if (userResponse == newSecret) {
+                System.out.println("Yes, that's correct!");
+                break;
+            } else {
+                System.out.println("Sorry, try again!");
+            }
+
+        }
+        return newSecret;
+    }
+
+//Bonus 3
+
+    public static void getFactorial(int min, int max) {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Please enter a number between 1 and 10: ");
+        long userResponse = scan.nextInt();
+
     }
 
 
 
 
+//Main method
 
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
 
+    Scanner scan = new Scanner(System.in);
 
         System.out.println(addition(4, 4));
         System.out.println(subtraction(9, 3));
@@ -73,8 +98,6 @@ public class MethodsExercises {
 
         //System.out.println(division(5, 0)); <---- Doesn't work. Gives us a runtime error as expected...
 
-        System.out.println("Enter a number between 1 and 20: ");
-        scan.nextInt();
 
     }
 }
