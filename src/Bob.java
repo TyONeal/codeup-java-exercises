@@ -16,9 +16,9 @@ public class Bob {
                 System.out.println("Sure.");
             } else if (bobChat.endsWith("!")) {
                 System.out.println("Whoa, chill out!");
-            } else if (bobChat.equals("")) {
+            } else if (bobChat.equalsIgnoreCase("")) {
                 System.out.println("Fine, be that way!");
-            } else if (bobChat.equals("Later")) {
+            } else if (bobChat.equalsIgnoreCase("Later")) {
                 break;
             } else {
                 System.out.println("Whatever.");
