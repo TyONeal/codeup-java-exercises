@@ -48,7 +48,7 @@ public class ControlFlowExercises {
 
 
 
-/////////////fizzbuzz//////////////////////////////
+///////////fizzbuzz//////////////////////////////
 
 //        for (int x = 1; x <= 100; x++) {
 //            if ((x % 3 == 0)&&(x % 5 == 0)) {
@@ -58,37 +58,15 @@ public class ControlFlowExercises {
 //            } else if (x % 3 == 0){
 //                System.out.println("Fizz");
 //            }else System.out.println(x);
-//
-//
-//        }
-/////////////////////////////////////////////////////////////////////////////
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.println("Pick a number between 1 and ten: ");
-        int numberSelected = scanner.nextInt();
-        int x = 1;
-        int numberSquared;
-        int numberCubed;
-        do {
-            do {
-                if (numberSelected >= 1 && numberSelected <= 10) {
-
-                    numberSquared = x * x;
-                    numberCubed = x * x * x;
+        }
+///////////////////////////////////////////////////////////////////////////
 
 
-                    System.out.printf("%-10d %d %10d\n", x, numberSquared, numberCubed);
-                    x++;
-                }
-            }
-            while (x <= numberSelected);
 
-            System.out.println("Would you like to continue?");
-            String firstContinueResponse = scanner.next();
-            if (firstContinueResponse.equals("yes")) {
-                break;
-            }
-        }while(true);
+
+
+
+
 //            if(Objects.equals(continueResponse, "yes")){
 //                do {
 //                    numberSquared = numberSelected * numberSelected;
@@ -114,46 +92,46 @@ public class ControlFlowExercises {
 //
 //        }
 
-           do {
-               System.out.println("Please enter a grade between 1 and 100: ");
-               int gradeInput = scanner.nextInt();
+//           do {
+//               System.out.println("Please enter a grade between 1 and 100: ");
+//               int gradeInput = scanner.nextInt();
+//
+//               if (gradeInput <= 100 && gradeInput >= 98) {
+//                   System.out.println("You got an A+!");
+//               } else if (gradeInput <= 97 && gradeInput > 94) {
+//                   System.out.println("You got an A!");
+//               } else if (gradeInput <= 94 && gradeInput >= 90) {
+//                   System.out.println("You got an A-!");
+//               } else if (gradeInput < 90 && gradeInput >= 88) {
+//                   System.out.println("You got an B+!");
+//               } else if (gradeInput < 87 && gradeInput > 84) {
+//                   System.out.println("You got an B!");
+//               } else if (gradeInput <= 84 && gradeInput >= 80) {
+//                   System.out.println("You got an B-!");
+//               } else if (gradeInput < 80 && gradeInput >= 78) {
+//                   System.out.println("You got an C+!");
+//               } else if (gradeInput <= 77 && gradeInput > 74) {
+//                   System.out.println("You got an C!");
+//               } else if (gradeInput <= 74 && gradeInput >= 70) {
+//                   System.out.println("You got an C-!");
+//               } else if (gradeInput < 70 && gradeInput >= 68) {
+//                   System.out.println("You got an D+!");
+//               } else if (gradeInput < 67 && gradeInput > 64) {
+//                   System.out.println("You got an D!");
+//               } else if (gradeInput <= 64 && gradeInput >= 60) {
+//                   System.out.println("You got an D-!");
+//               } else if (gradeInput < 60) {
+//                   System.out.println("You got an F!");
+//               }
+//
+//               System.out.println("Would you like to continue?");
+//               String secondContinueResponse = scanner.next();
+//               if (secondContinueResponse.equals("yes")) {
+//                   break;
+//               }
+//           }while(true);
 
-               if (gradeInput <= 100 && gradeInput >= 98) {
-                   System.out.println("You got an A+!");
-               } else if (gradeInput <= 97 && gradeInput > 94) {
-                   System.out.println("You got an A!");
-               } else if (gradeInput <= 94 && gradeInput >= 90) {
-                   System.out.println("You got an A-!");
-               } else if (gradeInput < 90 && gradeInput >= 88) {
-                   System.out.println("You got an B+!");
-               } else if (gradeInput < 87 && gradeInput > 84) {
-                   System.out.println("You got an B!");
-               } else if (gradeInput <= 84 && gradeInput >= 80) {
-                   System.out.println("You got an B-!");
-               } else if (gradeInput < 80 && gradeInput >= 78) {
-                   System.out.println("You got an C+!");
-               } else if (gradeInput <= 77 && gradeInput > 74) {
-                   System.out.println("You got an C!");
-               } else if (gradeInput <= 74 && gradeInput >= 70) {
-                   System.out.println("You got an C-!");
-               } else if (gradeInput < 70 && gradeInput >= 68) {
-                   System.out.println("You got an D+!");
-               } else if (gradeInput < 67 && gradeInput > 64) {
-                   System.out.println("You got an D!");
-               } else if (gradeInput <= 64 && gradeInput >= 60) {
-                   System.out.println("You got an D-!");
-               } else if (gradeInput < 60) {
-                   System.out.println("You got an F!");
-               }
 
-               System.out.println("Would you like to continue?");
-               String secondContinueResponse = scanner.next();
-               if (secondContinueResponse.equals("yes")) {
-                   break;
-               }
-           }while(true);
-
-
-        }
+//        }
     }
 
