@@ -3,8 +3,11 @@ import java.util.Scanner;
 public class Bob {
     public static void main(String[] args) {
 
+        //Give yourself the ability to talk to Bob (User)...
         Scanner bobscan = new Scanner(System.in);
 
+
+        //Put Bob's chat in a loop so that you can continue chatting until you're ready to leave...
         do {
             System.out.println("Talk to Bob!: ");
             String bobChat = bobscan.nextLine();
@@ -20,12 +23,6 @@ public class Bob {
             } else {
                 System.out.println("Whatever.");
             }
-        }while(true);
-
-
-
-
-
-
+        } while(true);
     }
 }
