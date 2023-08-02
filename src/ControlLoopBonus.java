@@ -1,8 +1,10 @@
-import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class ControlLoopBonus {
 
+public static void gameDisplay() {
+
+}
 public static void game() {
     Scanner gameScan = new Scanner(System.in);
 
@@ -10,32 +12,34 @@ public static void game() {
         String playerTwo = "2nd Player";
         String playerThree = "3rd Player";
         String playerFour = "4th Player";
-        String playerOneGuess;
+        char playerOneGuess;
         String playerTwoGuess;
         String playerThreeGuess;
         String playerFourGuess;
 
         String[] players = {playerOne, playerTwo, playerThree, playerFour};
-        String[] guessArray;
+
 
         System.out.println("Please enter a word:");
         String wordChosen = gameScan.next().toLowerCase();
+        String wordDisplay = "";
 
 
-        for(int i = 0; i < 15; i++) {
+
+
+        for(int i = 0; i <= 15; i++) {
             System.out.println(" ");
         }
 
-        for(int i = 1; i < players.length; i++) {
-//                if (i == i(1 * 4)) {
-//                    System.out.println("It's " + playerOne + "'s turn!");
+        for(int setOfTurns = 1; setOfTurns < players.length; setOfTurns++) {
             for(int turn = 1; turn <= players.length; turn++) {
                 if(turn == 1) {
                     System.out.println("It's player one's turn!");
                     System.out.println("Guess a letter!");
-                     playerOneGuess = String.valueOf(gameScan.next().charAt(0));
-                     if (wordChosen.contains(playerOneGuess)) {
+                     playerOneGuess = gameScan.next().charAt(0);
+                     if (wordChosen.contains(String.valueOf(playerOneGuess))) {
                          System.out.println("Yes, that's correct!");
+                         wordDisplay = wordChosen.substring(0, wordChosen.length() - 1).replace('_', playerOneGuess);
                      } else {
                          System.out.println("Sorry, that's not correct. Try again next turn!");
                      }

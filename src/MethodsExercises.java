@@ -77,7 +77,7 @@ public class MethodsExercises {
 //        do {
 //        System.out.println("Please enter a number between 1 and 20:");
 //        long factorial = factScan.nextLong();
-//        if (factorial >=1 && factorial <= 30) {
+//        if (factorial >=1 && factorial <= 20) {
 //            for (long i = factorial - 1; i >= 1; i--) {
 //                System.out.println(i);
 //                factorial = factorial * i;
@@ -95,14 +95,12 @@ public class MethodsExercises {
 //        }
 //        }while(true);
 //    }
-//
+////
 //    public static long getRecursionFactorial(long factorial) {
-//            if (factorial <= 2) {
+//            if (factorial <= 1) {
 //                return factorial;
 //            }
-//            long answer = factorial * getRecursionFactorial(factorial - 1);
-//        System.out.println(answer);
-//            return answer;
+//            return factorial * getRecursionFactorial(factorial - 1);
 //    }
 
 //Bonus 4
