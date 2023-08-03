@@ -13,9 +13,9 @@ public class Input {
     }
 
     public boolean yesNo() {
-        System.out.println("Do you like apples?");
+        System.out.println("Would you like to continue??");
         String booleanResponse = inputScan.nextLine();
-        System.out.println(booleanResponse);
+
             if (booleanResponse.equalsIgnoreCase("yes")) {
                 return true;
             } else {
@@ -59,7 +59,7 @@ public class Input {
     }
 
     public double getDouble() {
-        System.out.println("Please type a number with a decimal:");
+
         String doubleResponse = inputScan.next();
         System.out.println(doubleResponse);
 
