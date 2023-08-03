@@ -14,10 +14,8 @@ public class Input {
     }
 
     public boolean yesNo() {
-        inputScan.nextLine();
         System.out.println("Would you like to continue??");
         String booleanResponse = inputScan.nextLine();
-        clearScanner();
 
             if (booleanResponse.equalsIgnoreCase("yes")) {
                 return true;
@@ -28,15 +26,18 @@ public class Input {
     }
 
     public int getInt(int min, int max) {
-        System.out.println("Enter a number between " + min + " and " + max);
-        String intResponse = inputScan.next();
-        int parsedResponse = Integer.parseInt(intResponse);
+            System.out.println("Enter a number between " + min + " and " + max);
+            String intResponse = inputScan.next();
+            int parsedResponse = Integer.parseInt(intResponse);
+        do {
 
-           if (parsedResponse > min && parsedResponse < max) {
-               System.out.println("Nice job");
-           } else {
-               System.out.println("Try again...");
-           }
+            if (parsedResponse > min && parsedResponse < max) {
+                System.out.println("Nice job!");
+                break;
+            } else {
+                System.out.println("Try again...");
+            }
+        }while (true);
            clearScanner();
             return parsedResponse;
     }
@@ -54,22 +55,23 @@ public class Input {
         System.out.println("Enter a number between " + min + " and " + max);
         String doubleResponse = inputScan.next();
         double parsedResponse = Double.parseDouble(doubleResponse);
-
-        if (parsedResponse> min && parsedResponse < max) {
-            System.out.println("Nice job");
-        } else {
-            System.out.println("Try again...");
-        }
+        do {
+            if (parsedResponse > min && parsedResponse < max) {
+                System.out.println("Nice job");
+                break;
+            } else {
+                System.out.println("Try again...");
+            }
+        }while(true);
         clearScanner();
         return parsedResponse;
     }
 
     public double getDouble() {
 
-        String doubleResponse = inputScan.next();
-        clearScanner();
-
-        return Double.parseDouble(doubleResponse);
+        Double doubleResponse = inputScan.nextDouble();
+        inputScan.nextLine();
+        return doubleResponse;
     }
 
     public void clearScanner() {
