@@ -1,5 +1,6 @@
 package shapes;
 import util.Input;
+import java.util.Scanner;
 
 public class CircleApp {
 
@@ -14,7 +15,9 @@ public class CircleApp {
             System.out.println("The circle's area is : " + circleOne.getArea());
             System.out.println("The circle's circumference is " + circleOne.getCircumference());
 
-            promptRadius.yesNo();
+            if (!promptRadius.yesNo()) {
+                break;
+            }
 
         } while(true);
     }

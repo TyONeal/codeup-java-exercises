@@ -8,13 +8,16 @@ public class Input {
         System.out.println("Type a string:");
         String stringResponse = inputScan.nextLine();
         System.out.println(stringResponse);
+        clearScanner();
 
         return stringResponse;
     }
 
     public boolean yesNo() {
+        inputScan.nextLine();
         System.out.println("Would you like to continue??");
         String booleanResponse = inputScan.nextLine();
+        clearScanner();
 
             if (booleanResponse.equalsIgnoreCase("yes")) {
                 return true;
@@ -34,6 +37,7 @@ public class Input {
            } else {
                System.out.println("Try again...");
            }
+           clearScanner();
             return parsedResponse;
     }
 
@@ -41,6 +45,7 @@ public class Input {
         System.out.println("Please type a number:");
         String numberResponse = inputScan.next();
         System.out.println(numberResponse);
+        clearScanner();
 
         return Integer.parseInt(numberResponse);
     }
@@ -55,15 +60,22 @@ public class Input {
         } else {
             System.out.println("Try again...");
         }
+        clearScanner();
         return parsedResponse;
     }
 
     public double getDouble() {
 
         String doubleResponse = inputScan.next();
-        System.out.println(doubleResponse);
+        clearScanner();
 
         return Double.parseDouble(doubleResponse);
     }
+
+    public void clearScanner() {
+        inputScan.reset();
+    }
 }
+
+
 
