@@ -1,5 +1,6 @@
 import java.util.Scanner;
 
+
 public class ControlLoopBonus {
 
 public static void gameDisplay() {

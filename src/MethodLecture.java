@@ -18,7 +18,7 @@ public class MethodLecture {
             Scanner halfScan = new Scanner(System.in);
             System.out.println("Please enter a number:");
             double userResponse = halfScan.nextDouble();
-            boolean canHalf = true;
+            boolean canHalf;
 
                 if (userResponse % 2 == 0) {
                     canHalf = true;

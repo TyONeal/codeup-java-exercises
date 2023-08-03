@@ -3,6 +3,9 @@ import java.util.Random;
 
 public class MethodsExercises {
 
+    Random classRandom = new Random();
+    int randomNumber = classRandom.nextInt();
+
 //Arithmetic methods:
 
 //    public static int addition(int num1, int num2) {
@@ -25,13 +28,14 @@ public class MethodsExercises {
 //        return resultTotal;
 //    }
 //
-//    public static int recursionMulti(int num1, int num2) {
-//        if ((num1 == 0) || (num2 == 0)) {
-//            return 0;
-//        } else {
-//            return (num1 + recursionMulti(num1, num2 - 1));
-//        }
-//    }
+    public static int recursionMulti(int num1, int num2) {
+//       classRandom.nextInt(20);
+        if ((num1 == 0) || (num2 == 0)) {
+            return 0;
+        } else {
+            return (num1 + recursionMulti(num1, num2 - 1));
+        }
+    }
 //
 //    public static int modulus(int num1, int num2) {
 //        return num1 % num2;
