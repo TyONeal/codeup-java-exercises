@@ -57,10 +57,8 @@ public class Input {
     }
 
     public double getDouble() {
-
-        Double doubleResponse = inputScan.nextDouble();
-        inputScan.nextLine();
-        return doubleResponse;
+        clearScanner();
+        return inputScan.nextDouble();
     }
 
     public void clearScanner() {
