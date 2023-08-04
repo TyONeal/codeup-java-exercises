@@ -13,7 +13,6 @@ public class Movie {
     }
 
     public String getMovieName() {
-
         return name;
     }
 

@@ -39,13 +39,13 @@ public class MovieApplication {
                 }
             } else if (response == 5) {
                 for (Movie movie : MoviesArray.findAll()) {
-                    if(movie.getMovieName().equals("scifi")) {
+                    if(movie.getMovieCategory().equals("scifi")) {
                         System.out.println(movie.getMovieName());
                     }
                 }
             } else if (response == 6) {
                 for (Movie movie : MoviesArray.findAll()) {
-                    if(movie.getMovieName().equals("comedy")) {
+                    if(movie.getMovieCategory().equals("comedy")) {
                         System.out.println(movie.getMovieName());
                     }
                 }

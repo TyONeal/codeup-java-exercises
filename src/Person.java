@@ -4,13 +4,14 @@ public class Person {
     private String name;
 
     public String getName(){
-        Scanner nameScan = new Scanner(System.in);
-        System.out.println("What is your name?");
-        String userInput = nameScan.nextLine();
-        return userInput;
+
+        return name;
     }
 
     public void setName(String userInput){
+//        Scanner nameScan = new Scanner(System.in);
+//        System.out.println("What is your name?");
+//        String userInput = nameScan.nextLine();
         this.name = userInput;
 
     }
@@ -19,10 +20,13 @@ public class Person {
     }
 
     public static void main(String[] args) {
-        Person ty = new Person();
-        ty.setName(ty.getName());
-        ty.sayHello();
+//        Person ty = new Person();
+//        ty.setName(ty.getName());
+//        ty.sayHello();
 
+
+        Person newPerson = new Person();
+        newPerson.getName();
 //        Person person1 = new Person();
 //        Person person2 = new Person();
 //        System.out.println(person1.getName().equals(person2.getName()));
