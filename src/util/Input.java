@@ -5,24 +5,17 @@ public class Input {
     private Scanner inputScan = new Scanner(System.in);
 
     public String getString() {
-        System.out.println("Type a string:");
-        String stringResponse = inputScan.nextLine();
-        System.out.println(stringResponse);
         clearScanner();
-
-        return stringResponse;
+        return inputScan.next();
     }
 
     public boolean yesNo() {
-        System.out.println("Would you like to continue??");
         String booleanResponse = inputScan.nextLine();
-
             if (booleanResponse.equalsIgnoreCase("yes")) {
                 return true;
             } else {
                 return false;
             }
-
     }
 
     public int getInt(int min, int max) {
@@ -43,12 +36,8 @@ public class Input {
     }
 
     public int getInt() {
-        System.out.println("Please type a number:");
-        String numberResponse = inputScan.next();
-        System.out.println(numberResponse);
         clearScanner();
-
-        return Integer.parseInt(numberResponse);
+        return inputScan.nextInt();
     }
 
     public double getDouble(double min, double max) {

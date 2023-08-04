@@ -25,6 +25,10 @@ public static void game() {
         String wordChosen = gameScan.next().toLowerCase();
         String wordDisplay = "";
 
+        for (int wordLength = 0; wordLength < wordChosen.length(); wordLength++) {
+
+            wordDisplay += "_";
+        }
 
 
 
@@ -34,13 +38,21 @@ public static void game() {
 
         for(int setOfTurns = 1; setOfTurns < players.length; setOfTurns++) {
             for(int turn = 1; turn <= players.length; turn++) {
+                if(wordChosen.equalsIgnoreCase(wordDisplay)) {
+                    gameScan.reset();
+                    System.out.println("Game over!");
+                    break;
+                }
                 if(turn == 1) {
                     System.out.println("It's player one's turn!");
                     System.out.println("Guess a letter!");
                      playerOneGuess = gameScan.next().charAt(0);
                      if (wordChosen.contains(String.valueOf(playerOneGuess))) {
                          System.out.println("Yes, that's correct!");
-                         wordDisplay = wordChosen.substring(0, wordChosen.length() - 1).replace('_', playerOneGuess);
+                         int indexOfWordChosen = wordChosen.indexOf(playerOneGuess);
+                         wordDisplay = wordDisplay.substring(0, indexOfWordChosen) + playerOneGuess + wordDisplay.substring(indexOfWordChosen + 1);
+                         System.out.println(wordDisplay);
+
                      } else {
                          System.out.println("Sorry, that's not correct. Try again next turn!");
                      }
@@ -50,6 +62,9 @@ public static void game() {
                     playerTwoGuess = String.valueOf(gameScan.next().charAt(0));
                     if (wordChosen.contains(playerTwoGuess)) {
                         System.out.println("Yes, that's correct!");
+                        int indexOfWordChosen = wordChosen.indexOf(playerTwoGuess);
+                        wordDisplay = wordDisplay.substring(0, indexOfWordChosen) + playerTwoGuess + wordDisplay.substring(indexOfWordChosen + 1);
+                        System.out.println(wordDisplay);
                     } else {
                         System.out.println("Sorry, that's not correct. Try again next turn!");
                     }
@@ -59,6 +74,9 @@ public static void game() {
                     playerThreeGuess = String.valueOf(gameScan.next().charAt(0));
                     if (wordChosen.contains(playerThreeGuess)) {
                         System.out.println("Yes, that's correct!");
+                        int indexOfWordChosen = wordChosen.indexOf(playerThreeGuess);
+                        wordDisplay = wordDisplay.substring(0, indexOfWordChosen) + playerThreeGuess + wordDisplay.substring(indexOfWordChosen + 1);
+                        System.out.println(wordDisplay);
                     } else {
                         System.out.println("Sorry, that's not correct. Try again next turn!");
                     }
@@ -68,6 +86,9 @@ public static void game() {
                     playerFourGuess = String.valueOf(gameScan.next().charAt(0));
                     if (wordChosen.contains(playerFourGuess)) {
                         System.out.println("Yes, that's correct!");
+                        int indexOfWordChosen = wordChosen.indexOf(playerFourGuess);
+                        wordDisplay = wordDisplay.substring(0, indexOfWordChosen) + playerFourGuess + wordDisplay.substring(indexOfWordChosen + 1);
+                        System.out.println(wordDisplay);
                     } else {
                         System.out.println("Sorry, that's not correct. Try again next turn!");
                     }
