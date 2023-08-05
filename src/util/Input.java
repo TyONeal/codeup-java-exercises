@@ -6,10 +6,11 @@ public class Input {
 
     public String getString() {
         clearScanner();
-        return inputScan.next();
+        return inputScan.nextLine();
     }
 
     public boolean yesNo() {
+        clearScanner();
         String booleanResponse = inputScan.nextLine();
             if (booleanResponse.equalsIgnoreCase("yes")) {
                 return true;
