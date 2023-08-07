@@ -9,9 +9,20 @@ public class StudentRecord extends ViewPort {
 
 //instance variables
     private String name;
-    ArrayList<Object> studentRecord = new ArrayList<>();
 
-    Student newStudent = new Student();
+    Student newStudent;
+    Gradebook newGradebook;
+    AttendanceRecord newAttendance;
+    StudentRecord newRecord;
+
+//constructor
+
+    public StudentRecord() {
+    newStudent = new Student();
+    newGradebook = new Gradebook();
+    newAttendance = new AttendanceRecord();
+    newRecord = new StudentRecord();
+    }
 
 
 
@@ -25,9 +36,7 @@ public class StudentRecord extends ViewPort {
         this.name = name;
     }
 
-    public ArrayList<Object> getStudentRecord() {
-        return studentRecord;
-    }
+
 
 
 
@@ -35,31 +44,29 @@ public class StudentRecord extends ViewPort {
 //method
 
 
-    public ArrayList<Object> populateStudentRecord(StudentRecord studentRecord) {
-        System.out.println("Welcome! Let's add a new Student's record: ");
+//    public ArrayList<Object> populateStudentRecord(StudentRecord studentRecord) {
+//        System.out.println("Welcome! Let's add a new Student's record: ");
+//
+//
+//        //create the student
+//        System.out.println("First let's take in the student's information: \n");
+//        this.newStudent.populateStudent(newStudent);
+//        newRecord.createStudent();
 
-        ArrayList<Object> populatedRecordList = studentRecord.getStudentRecord();
-
-
-        //create the student
-        System.out.println("First let's take in the student's information: \n");
-        System.out.println();
-        populatedRecordList.add(newStudent);
-
-
-        //create the gradebook
-        System.out.println("\nNow that we've made a student, let's add a gradebook to their records: \n");
-        populatedRecordList.add(createGradeBook());
-
-        //create the attendance
-        System.out.println("\nNow that our student has some grades, let's add their attendance record: \n");
-        populatedRecordList.add(createAttendanceRecord());
-
-        // spit out list
-        return populatedRecordList;
-
-
-    }
+//
+//        //create the gradebook
+//        System.out.println("\nNow that we've made a student, let's add a gradebook to their records: \n");
+//        populatedRecordList.add(createGradeBook());
+//
+//        //create the attendance
+//        System.out.println("\nNow that our student has some grades, let's add their attendance record: \n");
+//        populatedRecordList.add(createAttendanceRecord());
+//
+//        // spit out list
+//        return populatedRecordList;
+//
+//
+//    }
 
 
     public Student createStudent() {
