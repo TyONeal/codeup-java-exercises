@@ -6,13 +6,20 @@ import util.Input;
 public class Student {
 //instance variables
     private String name;
-    private ArrayList<Double> grades = new ArrayList<>();
+    private String gitHubUserName;
+    private ArrayList<Double> grades;
     private final Input input = new Input();
 
 // constructors
-    public Student(String newName) {
-        name = newName;
-        grades.clear();
+    public Student() {
+        System.out.println("Let's create a student:\n");
+        System.out.println("\nEnter the student's name:");
+        setName(input.getString());
+
+        grades = new ArrayList<>();
+
+        System.out.println("Let's add our student's gitHub username:");
+        setGitHubUserName(input.getString());
     }
 
 //getters and setters
@@ -22,6 +29,13 @@ public class Student {
     }
     public void setName(String newName) {
         this.name = newName;
+    }
+
+    public String getGitHubUserName() {
+        return this.gitHubUserName;
+    }
+    public void setGitHubUserName(String userName) {
+        this.gitHubUserName = userName;
     }
     public double getGradeAverage() {
 

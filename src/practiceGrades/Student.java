@@ -7,9 +7,6 @@ public class Student extends StudentRecord {
 //instance variables
     private String name;
     private String gitHubUserName;
-    private double attendanceRecord;
-    private double totalGrade;
-    private char letterGrade;
 
 // scanner
    Input studentScan = new Input();
@@ -30,17 +27,6 @@ public class Student extends StudentRecord {
         this.gitHubUserName = gitHubUserName;
     }
 
-    public double getAttendanceRecord() {
-        return attendanceRecord;
-    }
-
-    public double getTotalGrade() {
-        return totalGrade;
-    }
-
-    public char getLetterGrade() {
-        return letterGrade;
-    }
 
 //methods
 

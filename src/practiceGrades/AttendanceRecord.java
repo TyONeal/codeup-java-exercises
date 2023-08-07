@@ -11,13 +11,19 @@ public class AttendanceRecord extends StudentRecord {
     private double daysMissed = 0;
     private double totalDays = 0;
     private double attendanceAverage;
-    private HashMap<String, String> attendance = new HashMap<>();
+    private HashMap<String, String> attendance;
 
 // scanner
 
     Input attendanceScan = new Input();
 
-// getters
+//constructors
+
+    public AttendanceRecord() {
+        attendance = new HashMap<>();
+    }
+
+    // getters
 
     public double getDaysAttended() {
         return daysAttended;
