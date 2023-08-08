@@ -16,5 +16,6 @@ public class InputTest {
 //        newInput.getDouble(1, 5);
 //        System.out.println("Enter a number with a decimal.");
 //        newInput.getDouble();
+//        newInput.getHexidecimal();
     }
 }

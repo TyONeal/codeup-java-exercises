@@ -32,7 +32,7 @@ public class Input {
         clearScanner();
         try {
             return Integer.parseInt(this.getString());
-        } catch (NumberFormatException error) {
+        } catch (NumberFormatException e) {
             System.out.println("You must enter a whole number...");
             return this.getInt();
         }
@@ -60,7 +60,27 @@ public class Input {
     public void clearScanner() {
         inputScan.reset();
     }
+    public int getBinary() {
+            System.out.println("Enter a binary number to convert:");
+        try {
+            return Integer.valueOf(getString(), 2);
+        } catch (NumberFormatException e) {
+            System.out.println("Sorry, this doesn't work.");
+            return Integer.valueOf(getString(), 2);
+        }
+    }
+
+    public int getHexidecimal() {
+        System.out.println("Enter a hexidecimal number to convert:");
+        try{
+            return Integer.valueOf(getString(), 16);
+        } catch (NumberFormatException e) {
+            System.out.println("Sorry that didn't work.");
+            return Integer.valueOf(getString(), 16);
+        }
+    }
 }
+
 
 
 
