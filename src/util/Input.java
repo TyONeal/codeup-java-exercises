@@ -29,6 +29,7 @@ public class Input {
     }
 
     public int getInt() {
+        clearScanner();
         try {
             return Integer.parseInt(this.getString());
         } catch (NumberFormatException error) {

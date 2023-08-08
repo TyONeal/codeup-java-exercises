@@ -12,7 +12,7 @@ public class Student {
     private String gitHubUserName;
     private ArrayList<Double> grades;
     private final Input input = new Input();
-    private HashMap<String, String> attendance;
+    protected HashMap<String, String> attendance;
 
     private ArrayList<String> daysMissed;
 
@@ -66,9 +66,11 @@ public class Student {
     public void addGrade() {
          grades.add(input.getDouble());
     }
-    public String displayAllGrades() {
-        ArrayList<Double> eachGrade = new ArrayList<>(grades);
-        return eachGrade.toString();
+    public void displayAllGrades() {
+        for(double grade : grades) {
+            System.out.println("Assignment Grade: " + grade);
+        }
+
     }
 
     public void recordAttendance() {
@@ -78,11 +80,11 @@ public class Student {
         attendance.put(key, value);
     }
 
-    public void displayAllAttendance(HashMap<String, String> attendance) {
-        for(Map.Entry day : attendance.entrySet()) {
+    public void displayAllAttendance() {
+        for(Map.Entry day : this.attendance.entrySet()) {
             if (day.getValue().equals("P")) {
                 System.out.println("On " + day.getKey() + " The student was present.");
-            } else {
+            } else if (day.getValue().equals("A")){
                 System.out.println("On " + day.getKey() + " The student was absent.");
             }
         }
@@ -94,7 +96,6 @@ public class Student {
                 daysMissed.add(day.getKey().toString());
             }
         }
-        System.out.println(daysMissed.toString());
         return daysMissed;
     }
 
