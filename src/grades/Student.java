@@ -1,6 +1,9 @@
 package grades;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+
 import util.Input;
 
 public class Student {
@@ -9,6 +12,9 @@ public class Student {
     private String gitHubUserName;
     private ArrayList<Double> grades;
     private final Input input = new Input();
+    private HashMap<String, String> attendance;
+
+    private ArrayList<String> daysMissed;
 
 // constructors
     public Student() {
@@ -20,6 +26,9 @@ public class Student {
 
         System.out.println("Let's add our student's gitHub username:");
         setGitHubUserName(input.getString());
+
+        attendance = new HashMap<>();
+        daysMissed = new ArrayList<>();
     }
 
 //getters and setters
@@ -46,6 +55,10 @@ public class Student {
         return gradeTotal / grades.size();
     }
 
+    public HashMap<String, String> getAttendance() {
+        return attendance;
+    }
+
     //other methods
     public void addGrade(double grade) {
         grades.add(grade);
@@ -56,6 +69,33 @@ public class Student {
     public String displayAllGrades() {
         ArrayList<Double> eachGrade = new ArrayList<>(grades);
         return eachGrade.toString();
+    }
+
+    public void recordAttendance() {
+        attendance.put(input.getString(), input.getString());
+    }
+    public void recordAttendance(String key, String value) {
+        attendance.put(key, value);
+    }
+
+    public void displayAllAttendance(HashMap<String, String> attendance) {
+        for(Map.Entry day : attendance.entrySet()) {
+            if (day.getValue().equals("P")) {
+                System.out.println("On " + day.getKey() + " The student was present.");
+            } else {
+                System.out.println("On " + day.getKey() + " The student was absent.");
+            }
+        }
+    }
+
+    public ArrayList<String> findAbsentDays() {
+        for(Map.Entry day : attendance.entrySet()) {
+            if (day.getValue().equals("A")) {
+                daysMissed.add(day.getKey().toString());
+            }
+        }
+        System.out.println(daysMissed.toString());
+        return daysMissed;
     }
 
 }

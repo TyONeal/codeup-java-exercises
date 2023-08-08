@@ -7,7 +7,7 @@ public class ServerNameGenerator {
 
     public static String randomElement(String[] array) {
         Random random = new Random();
-        int selectedElement = random.nextInt(array.length - 1) + 1;
+        int selectedElement = random.nextInt(array.length);
         return array[selectedElement];
 
     }
